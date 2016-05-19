@@ -1,0 +1,16 @@
+{
+  "apps": [{
+    "name": "firekylin.org",
+    "script": "www/production.js",
+    "cwd": "/Users/lizheming/Desktop/workspace/firekylin//Users/lizheming/Desktop/workspace/firekylin/firekylin.org",
+    "exec_mode": "cluster",
+    "instances": 0,
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}
