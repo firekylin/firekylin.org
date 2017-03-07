@@ -57,6 +57,11 @@ body {
   border-radius: 50px;
   color: #000;
 }
+.navbar-nav>li[disabled]>a:hover,
+.navbar-nav>li[disabled]>a:focus,
+.navbar-nav>li[disabled]>a:active {
+  background-color: transparent;
+}
 .navbar-toggle .icon-bar {
   background: #FFF;
 }
