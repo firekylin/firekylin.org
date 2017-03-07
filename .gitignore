@@ -31,3 +31,5 @@ output/
 output.tar.gz
 
 app/
+.DS_Store
+.vscode
