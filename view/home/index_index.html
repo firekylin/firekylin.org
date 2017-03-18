@@ -35,8 +35,16 @@
             <img src="https://img.shields.io/github/stars/75team/firekylin.svg?style=social&label=Star" alt="github star" />
           </a>
         </li>
+        {% if latest %}
+        <li>
+          <a href="https://github.com/75team/firekylin/releases">
+            v{{latest}}
+          </a>
+        </li>
+        {% endif %}
         <li><a href="https://75team.com">Demo</a></li>
         <li><a href="https://github.com/75team/firekylin/issues/34">Users</a></li>
+        <li><a href="https://github.com/75team/firekylin/blob/master/CHANGELOG.md">Change Log</a></li>
         <li><a href="https://github.com/75team/firekylin/wiki">Documentation</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
