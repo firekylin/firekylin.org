@@ -72,12 +72,14 @@ function getAccessToken(oauth){
 			url:url,
 			headers: { "Accept": "application/json" },
 			form:oauth
-	    },function(err,res,body){
-	    	if(err) reject(Error(err));
+	  },function(err,res,body){
+      console.log(err);
+      console.log(res);
+	    if(err) reject(Error(err));
 			var res = JSON.parse(body);
 			if(res.access_token) resolve(res);
 			else reject(Error(res));    	
-	    });
+	  });
 	});
 }
 
