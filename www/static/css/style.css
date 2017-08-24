@@ -36,6 +36,20 @@ body {
   background-size: cover;
   overflow: hidden;
 }
+@media screen and (max-width:767px){
+  html body{
+    background-size:initial;
+    overflowa:visible;
+  }
+  body .buttons a.button{
+    width: 130px;
+  }
+}
+@media screen and (max-width:375px){
+  body .buttons{
+    word-spacing:-2px;
+  }
+}
 .container, nav .container-fluid {
   padding-top: 20px;
 }

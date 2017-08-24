@@ -1,4 +1,3 @@
-
 let style = "";
 Array.from({length: 32}).forEach(function(_, k) {
     var selector = `#t${k + 1}`;

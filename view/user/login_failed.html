@@ -1,0 +1,25 @@
+{% extends "../themestore/parent.html" %}
+{% block title %}Login Failed{% endblock %}
+{% block style %}
+<style>
+.content{text-align: center;padding-top:10px;}
+.content img{width: 500px;}
+article{padding:10px 20px 30px;background-color: #fff;box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);border-radius: 3px;}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+	<img src="/static/img/cry.png" alt="Login Failed">
+	<p>
+		Login Failed,please
+		<a href="https://github.com/login/oauth/authorize?client_id={{clientId}}&scope=user,public_repo">Log in</a>
+		again!
+	</p>
+    
+</div>
+{% endblock %}
+
+{% block script %}
+  <script src="/static/js/personal.js"></script>
+{% endblock %}
