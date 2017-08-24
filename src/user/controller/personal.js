@@ -1,6 +1,6 @@
 'use strict';
 
-import Base from '../../themestore/controller/base.js';
+import Base from '../../themes/controller/base.js';
 
 export default class extends Base {
   async __before(...args) {

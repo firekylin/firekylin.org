@@ -4,22 +4,22 @@ $(function(){
  /* if(step != 'first'){
  $('#stepBefore').removeAttr("disabled");
     let str = $.param({id:themeid.value,themename:encodeURIComponent($(themename).val()),step:'before'});
-    beforeHandler = ()=>{$.post('/themestore/theme/step',str);}
+    beforeHandler = ()=>{$.post('/themes/index/step',str);}
     stepBefore.addEventListener('click',beforeHandler);
   }
   if(step != 'last'){
     $('#stepNext').removeAttr("disabled");
     let str2 = $.param({id:themeid.value,themename:encodeURIComponent($(themename).val()),step:'next'});
-    nextHandler = ()=>{$.post('/themestore/theme/step',str2);}
+    nextHandler = ()=>{$.post('/themes/index/step',str2);}
     stepNext.addEventListener('click',nextHandler);
   }*/
 if(step != 'first'){
     $('#stepBefore').removeAttr("disabled");
-    stepBefore.setAttribute('href',`/themestore/theme/step/id/${themeid.value}/themename/${themename.value}/step/before`);
+    stepBefore.setAttribute('href',`/themes/index/step/id/${themeid.value}/themename/${themename.value}/step/before`);
   }
   if(step != 'last'){
     $('#stepNext').removeAttr("disabled");
-    stepNext.setAttribute('href',`/themestore/theme/step/id/${themeid.value}/themename/${themename.value}/step/next`);
+    stepNext.setAttribute('href',`/themes/index/step/id/${themeid.value}/themename/${themename.value}/step/next`);
   }
   let sr = new StarRank({
     container:'#star',
@@ -28,7 +28,7 @@ if(step != 'first'){
       let str = $.param({rank:index,themename:$('#themename').val()});
       let rank;
       $.ajax({
-          url:'/themestore/mytheme/rank',
+          url:'/themes/mytheme/rank',
           type:'POST',
           dataType:'JSON',
           data:str,
@@ -53,7 +53,7 @@ if(step != 'first'){
           times = $(this).data('times');
       let str = $.param({filename:filename,times:times});
       $.ajax({
-        url:'/themestore/theme/download',
+        url:'/themes/index/download',
         type:'POST',
         dataType:'JSON',
         data:str
@@ -64,14 +64,14 @@ if(step != 'first'){
       let filesrc = encodeURIComponent($(this).data('filesrc'));
       let str = $.param({filesrc:filesrc,mmuid:thememmuid.value});
       $.ajax({
-        url:'/themestore/mytheme/delete',
+        url:'/themes/mytheme/delete',
         type:'POST',
         dataType:'JSON',
         data:str,
         success:function(e){
           if(!e.errno) {
             alert('Delete successfully!');
-            window.location.pathname='/themestore/theme/index';
+            window.location.pathname='/themes/index/index';
           }
           else alert('Delete failed, please try again！');
         }

@@ -4,7 +4,7 @@ $(function(){
         e.preventDefault();
         let data = new FormData($(this)[0]);
     	$.ajax({
-            url: '/themestore/upload/theme',
+            url: '/themes/upload/theme',
             type: 'POST',
             data: data,
             async: false,  

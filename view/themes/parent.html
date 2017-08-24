@@ -35,10 +35,10 @@
           {% endif %}
           <li><a href="https://75team.com">Demo</a></li>
           <li class="dropmenu">
-            <a href="javascript:void(0)" class="themestore active">Theme Store</a>
+            <a href="javascript:void(0)" class="themes active">Theme Store</a>
             <ul>
-              <li><a href="/themestore/theme/index">Theme List</a></li>
-              <li><a href="/themestore/upload/index">Upload Your Theme</a></li>
+              <li><a href="/themes/index/index">Theme List</a></li>
+              <li><a href="/themes/upload/index">Upload Your Theme</a></li>
             </ul>
           </li>
           <li><a href="https://github.com/firekylin/firekylin/issues/34">Users</a></li>
@@ -47,9 +47,9 @@
           {% if userInfo.user_loginname%}
           <li class="dropmenu usercenter">
               {% if userInfo.user_name %}
-              <a href="javascript:void(0)" class="themestore active">{{userInfo.user_name}}</a>
+              <a href="javascript:void(0)" class="themes active">{{userInfo.user_name}}</a>
               {% else %}
-              <a href="javascript:void(0)" class="themestore active">{{userInfo.user_loginname}}</a>
+              <a href="javascript:void(0)" class="themes active">{{userInfo.user_loginname}}</a>
               {% endif %}
             <ul>
               <li><a href="/user/personal/index">Personal Center</a></li>
@@ -86,7 +86,7 @@
 
           {% if userInfo.user_loginname%}
           <li class="dropmenu usercenter">
-            <a href="javascript:void(0)" class="themestore active">
+            <a href="javascript:void(0)" class="themes active">
               {% if userInfo.user_name %}
               {{userInfo.user_name}}
               {% else %}

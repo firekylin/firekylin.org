@@ -43,7 +43,7 @@ i.fa.fa-star {color: #FFD600;}
       <div class="right">
 	<!--<div class="btn-group">
           <a href="javascript:void(0)" class="btn btn-default" id="preview">Preview</a>
-          <a href="/themestore/theme/download/filename/{{data.theme_filesrc}}/times/{{data.theme_downloadtimes}}" class="btn btn-primary">Download</a>
+          <a href="/themes/index/download/filename/{{data.theme_filesrc}}/times/{{data.theme_downloadtimes}}" class="btn btn-primary">Download</a>
         </div>-->
         {% if data.theme_authoruid === userInfo.user_uid %}
         <a href="javascript:void(0)" class="btn-alert btn inlineBlock" id="deleteTheme" data-filesrc="{{data.theme_filesrc}}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
@@ -71,7 +71,7 @@ i.fa.fa-star {color: #FFD600;}
       <aside class="aside-right">
        <div class="btn-group">
           <a href="javascript:void(0)" class="btn btn-default" id="preview">Preview</a>
-          <a href="/themestore/theme/download/filename/{{data.theme_filesrc}}/times/{{data.theme_downloadtimes}}" class="btn btn-primary">Download</a>
+          <a href="/themes/index/download/filename/{{data.theme_filesrc}}/times/{{data.theme_downloadtimes}}" class="btn btn-primary">Download</a>
         </div>
         <div class="info-box">
           <p class="theme-lastUpdated table-tr">
@@ -106,10 +106,10 @@ i.fa.fa-star {color: #FFD600;}
           <header><h4 class="primary-text">Tags:</h4></header>
           <div class="info-box">
             {% for item in data.theme_tags %}
-              <a href="/themestore/theme/index/search/{{item}}/searchType/tags" class="item">{{item}}</a>,
+              <a href="/themes/index/index/search/{{item}}/searchType/tags" class="item">{{item}}</a>,
             {% endfor %}
             {% if data.theme_lastTags %}
-              <a href="/themestore/theme/index/search/{{data.theme_lastTags}}/searchType/tags" class="item">{{data.theme_lastTags}}</a>
+              <a href="/themes/index/index/search/{{data.theme_lastTags}}/searchType/tags" class="item">{{data.theme_lastTags}}</a>
             {% endif %}
           </div>      
           {% else %}          

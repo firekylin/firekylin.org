@@ -8,7 +8,7 @@ $(function(){
 	});
 	$(document).click(function(event) {
 		$('.wrapper-dropdown-3').removeClass('active');
-		if(event.target.getAttribute('class') !== 'themestore active')	$('li.dropmenu').removeClass('active');
+		if(event.target.getAttribute('class') !== 'themes active')	$('li.dropmenu').removeClass('active');
 	});
 	$('.dropmenu').click(function(e){
 		$(this).toggleClass('active');

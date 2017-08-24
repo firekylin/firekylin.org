@@ -55,7 +55,7 @@ export default class extends Base {
         utf8Themename = this.get('themename'),
 	markModel = this.model('mark');
     //获取跳转前的url
-    let url = this.get('state') || '/themestore/theme/index/type/'+type;
+    let url = this.get('state') || '/themes/index/index/type/'+type;
     let themename = encodeURIComponent(this.get('themename'));
     let data = await this._listModel.getData(themename);//弾S佉~M页轝¢潚~Ddata
     let markingInfo = await markModel.getMarkInfo(themename);//--//
@@ -109,7 +109,7 @@ linq.from(list).forEach(x=>{x.theme_lastupdated = this._listModel.formatDate(x.t
       //data = await this._listModel.where(type+'<'+data[type]+' or '+type+'='+data[type]+' and theme_id >'+id).order([type+' DESC,theme_id ASC']).find();
     }
     themename = _data.theme_name;
-    return this.redirect('/themestore/theme/detail/themename/'+themename);
+    return this.redirect('/themes/index/detail/themename/'+themename);
   }
 
   async downloadAction(){

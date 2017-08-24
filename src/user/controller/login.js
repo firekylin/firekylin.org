@@ -1,6 +1,6 @@
 'use strict';
 
-import Base from '../../themestore/controller/base.js';
+import Base from '../../themes/controller/base.js';
 import request from 'request';
 let url = 'https://github.com/login/oauth/access_token';
 
