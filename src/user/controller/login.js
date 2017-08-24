@@ -20,7 +20,7 @@ export default class extends Base {
     oauth.code = this.get('code');
     oauth.state = this.get('state');
 
-    let token = await getAccessToken();
+    let token = await getAccessToken(oauth);
     let userInfo = await getUserInfo(token);//这个userInfo是github返回的用户信息，不是缓存中读到的那个userInfo，自己起的名字别搞混了。。。
 
     if (userInfo.login) {
@@ -66,7 +66,7 @@ function getUserInfo(token){
 		});
 	});
 }
-function getAccessToken(){
+function getAccessToken(oauth){
 	return new Promise(function(resolve, reject) {
 		request.post({
 			url:url,
