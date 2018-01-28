@@ -31,7 +31,14 @@ export default class extends Base {
     this.assign('clientId',this._clientId);
     return this.display();
   }
-
+  
+  async usersAction() {
+    let users = await request('https://gist.githubusercontent.com/lizheming/1264dae9921a1c0495b5bfdc9d21ce32/raw/d926028eb36006f72171d6f0f7377e2ae49665ef/users.json');
+    users = JSON.parse(users);
+    this.assign({posts: await this.getAllRssData(users)});
+    return this.display();
+  }
+  
   async userAction() {
     let users = await request('https://gist.githubusercontent.com/lizheming/1264dae9921a1c0495b5bfdc9d21ce32/raw/d926028eb36006f72171d6f0f7377e2ae49665ef/users.json');
     users = JSON.parse(users);
