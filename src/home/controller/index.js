@@ -15,7 +15,7 @@ export default class extends Base {
    * @return {Promise} []
    */
   async indexAction(){
-    let release = path.join(think.RESOURCE_PATH, 'release/.latest');
+    let release = path.join(think.RESOURCE_PATH, 'release/v1/.latest');
     let version = false;
     let themeModel = this.model('theme');
     version = await readFileAsync(release).catch(() => false);
