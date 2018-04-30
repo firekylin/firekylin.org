@@ -1287,6 +1287,7 @@ svg.logo *[id^="t"], #node {
 }
 
 #node {
+        background: red;
     -webkit-animation-name: rotate_node;
             animation-name: rotate_node;
     -webkit-animation-delay: 1s;
@@ -1295,8 +1296,10 @@ svg.logo *[id^="t"], #node {
             animation-duration: 3.2s;
     -webkit-animation-timing-function: ease;
             animation-timing-function: ease;
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
+    -webkit-transform-origin: 75px 94px;
+            transform-origin: 75px 94px;
+    /* -webkit-transform-origin: center center;
+            transform-origin: center center; */
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
