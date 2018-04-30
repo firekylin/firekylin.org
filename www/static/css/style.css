@@ -1287,7 +1287,6 @@ svg.logo *[id^="t"], #node {
 }
 
 #node {
-        background: red;
     -webkit-animation-name: rotate_node;
             animation-name: rotate_node;
     -webkit-animation-delay: 1s;
