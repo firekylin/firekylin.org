@@ -1,6 +1,14 @@
 import Base from './base.js';
+import Turndown from 'turndown';
 // import read from 'node-readability';
 import request from 'request-promise-native';
+import {gfm} from 'turndown-plugin-gfm';
+
+const turndown = new Turndown({
+  headingStyle: 'atx',
+  codeBlockStyle: 'fenced'
+});
+turndown.use(gfm);
 
 // const readAsync = think.promisify(read);
 export default class extends Base {
@@ -16,6 +24,8 @@ export default class extends Base {
       },
       json: true
     });
+
+    resp.content = turndown.turndown(resp.content);
     return this.success(resp);
 
     // const html = await request({
