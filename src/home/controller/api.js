@@ -25,6 +25,10 @@ export default class extends Base {
       json: true
     });
 
+    const imgMatch = resp.match(/<img\s+(?:^src)*src="([^"]*)"[^>]*(?:\/)?>/);
+    const firstImageUrl = Array.isArray(imgMatch) && imgMatch.length ? imgMatch[1] : '';
+    resp.firstImageUrl = firstImageUrl;
+    
     resp.content = turndown.turndown(resp.content);
     return this.success(resp);
 
