@@ -1,7 +1,26 @@
+const os = require('os');
+const path = require('path');
+const fileCache = require('think-cache-file');
 const nunjucks = require('think-view-nunjucks');
 const {Console, File, DateFile} = require('think-logger3');
-const path = require('path');
 const isDev = think.env === 'development';
+
+/**
+ * cache adapter config
+ * @type {Object}
+ */
+exports.cache = {
+  type: 'file',
+  common: {
+    timeout: 60 * 60 * 1000 // millisecond
+  },
+  file: {
+    handle: fileCache,
+    cachePath: path.join(os.tmpdir(), 'cache'), // absoulte path is necessarily required
+    pathDepth: 1,
+    gcInterval: 60 * 60 * 1000 // gc interval
+  }
+};
 
 /**
  * view adapter config
