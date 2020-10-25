@@ -1,16 +1,10 @@
-const Base = require('./base');
-const path = require('path');
-const fs = require('fs');
+const Base = require('./base'
 const request = require('request-promise-native');
 const xmljs = require('xml-js');
 const md5 = require('md5');
-
-const readFileAsync = think.promisify(fs.readFile, fs);
-
 module.exports = class extends Base {
   async indexAction(){
-    const release = path.join(think.RESOURCE_PATH, 'release/v1/.latest');
-    const version = await readFileAsync(release).catch(() => false);
+    const version = await request('https://firekylin.org/release/v1/.latest').catch(_ => false);
     this.assign({latest: version});
     return this.display();
   }
