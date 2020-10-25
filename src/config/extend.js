@@ -7,7 +7,7 @@ module.exports = [
   cache,
   {
     think: {
-      RESOURCE_PATH: path.join(__dirname, 'www'),
+      RESOURCE_PATH: path.join(process.cwd(), 'www'),
     }
   }
 ];
