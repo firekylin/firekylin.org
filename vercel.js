@@ -13,7 +13,11 @@ const app = new Application({
   env: 'vercel',
   external: {
     static: {
-      www: path.join(__dirname, 'www')
+      www: path.join(__dirname, 'www'),
+      release: [
+        path.join(__dirname, 'www/release/.latest'),
+        path.join(__dirname, 'www/release/v1/.latest')
+      ]
     }
   }
 });

@@ -13,7 +13,7 @@ module.exports = [
     handle: 'resource',
     options: {
       root: path.join(think.ROOT_PATH, 'www'),
-      publicPath: /^\/(static|favicon\.ico)/
+      publicPath: /^\/(release|static|favicon\.ico)/
     }
   },
   {
