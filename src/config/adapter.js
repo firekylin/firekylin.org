@@ -2,8 +2,7 @@ const os = require('os');
 const path = require('path');
 const fileCache = require('think-cache-file');
 const nunjucks = require('think-view-nunjucks');
-const {Console, File, DateFile} = require('think-logger3');
-const isDev = think.env === 'development';
+const {Console} = require('think-logger3');
 
 /**
  * cache adapter config
@@ -43,23 +42,8 @@ exports.view = {
  * @type {Object}
  */
 exports.logger = {
-  type: isDev ? 'console' : 'dateFile',
+  type: 'console',
   console: {
     handle: Console
-  },
-  file: {
-    handle: File,
-    backups: 10, // max chunk number
-    absolute: true,
-    maxLogSize: 50 * 1024, // 50M
-    filename: path.join(think.ROOT_PATH, 'logs/app.log')
-  },
-  dateFile: {
-    handle: DateFile,
-    level: 'ALL',
-    absolute: true,
-    pattern: '-yyyy-MM-dd',
-    alwaysIncludePattern: true,
-    filename: path.join(think.ROOT_PATH, 'logs/app.log')
   }
 };
