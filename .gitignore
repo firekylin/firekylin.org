@@ -39,3 +39,4 @@ adapter.development.js
 
 .vercel
 config/vercel.json
+.env

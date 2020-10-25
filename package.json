@@ -18,6 +18,8 @@
     "think-view": "^1.0.0",
     "think-view-nunjucks": "^1.0.1",
     "thinkjs": "^3.0.0",
+    "turndown": "^7.0.0",
+    "turndown-plugin-gfm": "^1.0.2",
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
