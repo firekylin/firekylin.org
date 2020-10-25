@@ -1,4 +1,4 @@
-const Base = require('./base'
+const Base = require('./base');
 const request = require('request-promise-native');
 const xmljs = require('xml-js');
 const md5 = require('md5');
