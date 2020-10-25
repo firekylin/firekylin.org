@@ -38,5 +38,4 @@ config.development.js
 adapter.development.js
 
 .vercel
-config/vercel.json
 .env
