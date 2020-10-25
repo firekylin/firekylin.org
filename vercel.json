@@ -8,9 +8,25 @@
     {
       "src": "vercel.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "www/release/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "www/release/v1/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/release/.latest",
+      "dest": "/www/release/.latest"
+    },
+    {
+      "src": "/release/v1/.latest",
+      "dest": "/www/release/v1/.latest"
+    },
     {
       "src": "/(.*)",
       "dest": "/vercel.js"
