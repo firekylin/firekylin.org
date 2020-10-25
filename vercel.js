@@ -4,15 +4,15 @@ const Application = require('thinkjs');
 const Loader = require('thinkjs/lib/loader');
 
 const app = new Application({
-  ROOT_PATH: process.cwd(),
-  APP_PATH: path.join(process.cwd(), 'src'),
-  VIEW_PATH: path.join(process.cwd(), 'view'),
+  ROOT_PATH: __dirname,
+  APP_PATH: path.join(__dirname, 'src'),
+  VIEW_PATH: path.join(__dirname, 'view'),
   RUNTIME_PATH: process.cwd(),
   proxy: true, // use proxy
   env: 'vercel',
   external: {
     static: {
-      www: path.join(process.cwd(), 'www')
+      www: path.join(__dirname, 'www')
     }
   }
 });

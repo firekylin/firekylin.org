@@ -9,10 +9,14 @@
     "lint-fix": "eslint --fix src/"
   },
   "dependencies": {
+    "md5": "^2.3.0",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "think-logger3": "^1.0.0",
     "think-view": "^1.0.0",
     "think-view-nunjucks": "^1.0.1",
-    "think-logger3": "^1.0.0",
-    "thinkjs": "^3.0.0"
+    "thinkjs": "^3.0.0",
+    "xml-js": "^1.6.11"
   },
   "devDependencies": {
     "think-watcher": "^3.0.0",
