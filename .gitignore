@@ -1,3 +1,4 @@
+.DS_Store
 # Logs
 logs
 *.log
@@ -30,6 +31,8 @@ node_modules/
 output/
 output.tar.gz
 
+runtime/
 app/
-.DS_Store
-.vscode
+
+config.development.js
+adapter.development.js
