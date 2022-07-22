@@ -4,7 +4,7 @@ const xmljs = require('xml-js');
 const md5 = require('md5');
 module.exports = class extends Base {
   async indexAction(){
-    const version = await request('https://firekylin.org/release/v1/.latest').catch(_ => false);
+    const version = await request('https://firekylin.lithub.cc/release/v1/.latest').catch(_ => false);
     this.assign({latest: version});
     return this.display();
   }
