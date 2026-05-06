@@ -6,7 +6,7 @@
   },
   "builds": [
     {
-      "src": "vercel.js",
+      "src": "bootstrap.js",
       "use": "@vercel/node"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/vercel.js"
+      "dest": "/bootstrap.js"
     }
   ]
 }
